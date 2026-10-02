@@ -1,0 +1,57 @@
+{
+ "name": "Case name",
+ "blurb": "One-paragraph summary.",
+ "kpis": [
+  [
+   "Metric",
+   "Value",
+   "Note"
+  ]
+ ],
+ "chapters": [
+  [
+   "1 \u00b7 Step",
+   "Plain English",
+   "Why it matters",
+   "What can break"
+  ]
+ ],
+ "parties": [
+  {
+   "id": "a",
+   "c": 0,
+   "r": 1,
+   "t": "Customer",
+   "s": "Pays",
+   "tag": "<span class=\"tag I\">INFERRED</span>",
+   "role": "Role text",
+   "data": "IDs",
+   "tm": "Timing",
+   "br": "Break points"
+  }
+ ],
+ "edges": [
+  [
+   "a",
+   "a",
+   "store"
+  ]
+ ],
+ "scen": {
+  "Scenario": [
+   "store",
+   [
+    "a"
+   ],
+   [
+    "Caption"
+   ]
+  ]
+ },
+ "gaps": [
+  [
+   "Open question",
+   "Detail"
+  ]
+ ]
+}

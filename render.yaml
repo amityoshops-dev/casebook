@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: casebook
+    runtime: static
+    buildCommand: echo "static site"
+    staticPublishPath: .

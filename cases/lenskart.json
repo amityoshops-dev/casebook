@@ -1,0 +1,692 @@
+{
+ "id": "lenskart",
+ "name": "Lenskart · Omnichannel payments",
+ "blurb": "How a listed Indian eyewear retailer turns a counter swipe, an app payment or a bag of cash into booked revenue and treasury liquidity.",
+ "kpis": [
+  [
+   "FY26 total income",
+   "₹8,988 Cr",
+   "+28.2% vs ₹7,009 Cr"
+  ],
+  [
+   "FY26 net profit",
+   "₹501 Cr",
+   "vs ₹297 Cr · adj. ~₹530 Cr"
+  ],
+  [
+   "Q1 FY27 income",
+   "₹2,783 Cr",
+   "+43% YoY"
+  ],
+  [
+   "Stores (Jun 2025)",
+   "2,806",
+   "2,137 India · 669 intl"
+  ],
+  [
+   "Employees FY25",
+   "17,607",
+   "tech team 491"
+  ],
+  [
+   "IPO / listing",
+   "₹402",
+   "listed Nov 2025 · NSE LENSKART"
+  ]
+ ],
+ "chapters": [
+  [
+   "1 · The order and the tender",
+   "The customer chooses frames and lenses; the billing app creates an invoice and records how it is paid (card, UPI, cash, or a mix).",
+   "Every later match depends on this record carrying an order ID and tender split.",
+   "Wrong tender split, duplicate invoice."
+  ],
+  [
+   "2 · Authorisation",
+   "Card taps go from the terminal to the acquirer, card network and issuer; UPI goes through NPCI; online payments go through a gateway such as Razorpay or PhonePe.",
+   "Authorisation proves the customer can pay, but no money has reached Lenskart yet.",
+   "Declines, timeouts, pending UPI."
+  ],
+  [
+   "3 · Settlement",
+   "Aggregators hold funds in escrow, deduct MDR plus GST, and pay out the net, typically T+1. Cash waits in the store safe, then goes by CIT van to a bank branch.",
+   "This is where gross sales shrink to net cash, and where float (money in transit) sits.",
+   "Held settlements, short cash counts."
+  ],
+  [
+   "4 · Landing in the bank",
+   "Credits arrive in Lenskart bank accounts, possibly tagged by VAN per store. The bank sends a daily statement file with reference text.",
+   "Clean references make automatic matching possible.",
+   "Credits with no reference, wrong store."
+  ],
+  [
+   "5 · Reconciliation",
+   "Three records are compared: the invoice register, the aggregator/CIT report, and the bank statement. Matches are booked; mismatches go to suspense.",
+   "Proves every rupee of revenue is real cash and exposes leakage early.",
+   "Ageing suspense, unmatched UPI."
+  ],
+  [
+   "6 · Treasury and outflows",
+   "Balances are swept to a master account, then pay franchise partners, factories, vendors, payroll and taxes; surplus is invested per policy.",
+   "Turns collections into usable liquidity; for 306 franchise stores, the netting formula matters.",
+   "Wrong netting, idle cash, FX on overseas cash."
+  ]
+ ],
+ "calc": 1,
+ "q": [
+  [
+   "Q1 FY26",
+   61.17
+  ],
+  [
+   "Q3 FY26",
+   132.71
+  ],
+  [
+   "Q4 FY26",
+   203.62
+  ],
+  [
+   "Q1 FY27",
+   228.43
+  ]
+ ],
+ "qt": "Net profit by quarter (₹ Cr)",
+ "hold": [
+  [
+   "Promoter",
+   17.53,
+   "#0369a1"
+  ],
+  [
+   "FII",
+   12.76,
+   "#6d28d9"
+  ],
+  [
+   "Mutual funds",
+   12.2,
+   "#047857"
+  ],
+  [
+   "DII",
+   11.37,
+   "#b45309"
+  ],
+  [
+   "Others",
+   46.14,
+   "#667389"
+  ]
+ ],
+ "ht": "Shareholding, Jun 2026",
+ "holders": [
+  [
+   "Peyush Bansal",
+   "8.78%"
+  ],
+  [
+   "Kedaara II Continuation Fund",
+   "1.60%"
+  ],
+  [
+   "Kedaara Fund III",
+   "1.18%"
+  ],
+  [
+   "Pre-IPO: SoftBank (DRHP)",
+   "15.04%"
+  ],
+  [
+   "Pre-IPO: ADIA",
+   "12.45%"
+  ],
+  [
+   "Pre-IPO: Temasek",
+   "4.86%"
+  ]
+ ],
+ "entities": [
+  [
+   "Lenskart Solutions Ltd",
+   "Listed parent, India omnichannel (NSE: LENSKART)"
+  ],
+  [
+   "Owndays (Japan)",
+   "Acquired 2022, ~US$400M, ~13 markets"
+  ],
+  [
+   "Neso Brands",
+   "International brand vehicle"
+  ],
+  [
+   "Dealskart",
+   "Former franchisee, absorbed; stores became company-owned"
+  ],
+  [
+   "Baofeng Framekart",
+   "China frame JV"
+  ],
+  [
+   "Bhiwadi · Gurugram",
+   "Mega-factory and lab; plus Singapore & UAE sites"
+  ]
+ ],
+ "gaps": [
+  [
+   "Acquirer / PA mix",
+   "Share of in-store card, UPI, online via Pine Labs, Razorpay, PhonePe; MDR by mode; PA licence status."
+  ],
+  [
+   "Bank layer",
+   "VAN vs direct collection accounts; sweep timing; which banks."
+  ],
+  [
+   "ERP / system of record",
+   "Not public. Third-party scans show MongoDB, Zoho CRM, SAS BI; no ERP confirmed."
+  ],
+  [
+   "Recon quality",
+   "Auto-match rate, suspense ageing, causes of UPI breaks."
+  ],
+  [
+   "Cash economics",
+   "CIT vendor, cost per ₹ lakh, shrink, cash share of sales."
+  ],
+  [
+   "FOFO settlement",
+   "Margin %, cycle, inventory ownership for 306 stores."
+  ],
+  [
+   "International treasury",
+   "Owndays JPY collections, FX hedging, upstreaming."
+  ],
+  [
+   "Tax",
+   "GST HSN split, ITC across states, advance-tax cash out. Tax paid and cost lines still to be extracted from audited notes."
+  ]
+ ],
+ "caveat": "Sources differ slightly (₹501 Cr statutory vs ~₹530 Cr adjusted profit; ₹8,814 Cr operating revenue vs ₹8,988 Cr total income). Tie back to audited results on BSE/NSE.",
+ "parties": [
+  {
+   "id": "cust",
+   "c": 0,
+   "r": 2,
+   "t": "Customer",
+   "s": "Card · UPI · cash · EMI",
+   "tag": "<span class=\"tag V\">PUBLIC</span>",
+   "role": "Pays for eyewear in store, on web or app.",
+   "data": "Card/UPI credential, Rx, order",
+   "tm": "—",
+   "br": "Declines, double debits"
+  },
+  {
+   "id": "pos",
+   "c": 1,
+   "r": 0,
+   "t": "Store POS + EDC/QR",
+   "s": "Lenskart billing + Pine Labs",
+   "tag": "<span class=\"tag U\">YOU-STATED</span>",
+   "role": "Billing app raises invoice; Pine Labs terminal takes card tap/insert and UPI QR. Lenskart runs one inventory platform across stores and online (<span class=\"tag V\">PUBLIC</span>).",
+   "data": "Invoice no., terminal ID, RRN, auth code, tender split",
+   "tm": "Auth ~seconds; EOD batch",
+   "br": "Offline terminal, split tender, wrong invoice link"
+  },
+  {
+   "id": "web",
+   "c": 1,
+   "r": 1.5,
+   "t": "lenskart.com / App",
+   "s": "Checkout & order mgmt",
+   "tag": "<span class=\"tag I\">INFERRED</span>",
+   "role": "Customer-facing checkout calling the payment gateways; order created before payment confirms.",
+   "data": "Order ID, payment ID, webhook status",
+   "tm": "Real-time",
+   "br": "Webhook lost, paid-but-no-order"
+  },
+  {
+   "id": "safe",
+   "c": 1,
+   "r": 3,
+   "t": "Store cash & safe",
+   "s": "Dual custody, sealed bag",
+   "tag": "<span class=\"tag I\">INFERRED</span>",
+   "role": "Cash tendered at counter is counted and sealed; never banked from store.",
+   "data": "Bag seal ID, counted amount, cashier",
+   "tm": "Daily close",
+   "br": "Count variance, shrink"
+  },
+  {
+   "id": "intl",
+   "c": 1,
+   "r": 4,
+   "t": "Owndays / intl stores",
+   "s": "JP · SG · AE · others",
+   "tag": "<span class=\"tag V\">PUBLIC</span> 669 stores",
+   "role": "Local-currency retail in Owndays and other overseas formats; Japan has 266 stores on remote optometry.",
+   "data": "Local POS, currency, tax",
+   "tm": "Per country",
+   "br": "FX, local tax rules"
+  },
+  {
+   "id": "pl",
+   "c": 2,
+   "r": 0,
+   "t": "Pine Labs",
+   "s": "Offline acquiring platform",
+   "tag": "<span class=\"tag U\">YOU-STATED</span>",
+   "role": "Merchant platform: POS hardware, multi-acquirer routing, billing integration, EMI/affordability, reconciliation tooling. Acquiring bank sits behind it.",
+   "data": "TID/MID, batch ID, MDR report",
+   "tm": "Typically T+1 (contract)",
+   "br": "Terminal batch not closed, MDR mismatch"
+  },
+  {
+   "id": "rzp",
+   "c": 2,
+   "r": 1,
+   "t": "Razorpay",
+   "s": "Payment aggregator / gateway",
+   "tag": "<span class=\"tag U\">YOU-STATED</span>",
+   "role": "Online PA/PG: cards, UPI, netbanking, wallets, EMI/BNPL; also payouts, smart-collect virtual accounts, POS. Holds funds in escrow until settlement.",
+   "data": "Payment ID, order ID, settlement ID, fee & GST",
+   "tm": "T+1 default; instant optional",
+   "br": "Captured-not-settled, refunds, chargebacks"
+  },
+  {
+   "id": "php",
+   "c": 2,
+   "r": 2,
+   "t": "PhonePe PG",
+   "s": "UPI + gateway for merchants",
+   "tag": "<span class=\"tag U\">YOU-STATED</span>",
+   "role": "PhonePe is a UPI app and TPAP; its merchant gateway offers UPI, cards, QR and terminals.",
+   "data": "Merchant txn ID, UPI ref, settlement report",
+   "tm": "UPI near-instant to T+1",
+   "br": "UPI pending/timeout, duplicate callbacks"
+  },
+  {
+   "id": "cit",
+   "c": 2,
+   "r": 3,
+   "t": "CIT agency",
+   "s": "Cash-in-transit logistics",
+   "tag": "<span class=\"tag X\">ILLUSTRATIVE</span> vendor",
+   "role": "Armoured van pickup on schedule, barcode scan, cash-processing centre, deposit to bank. Vendor names in your brief (CMS, SIS) are standard industry players, not confirmed for Lenskart.",
+   "data": "Pickup slip, bag barcode, deposit slip",
+   "tm": "T+1 to T+2",
+   "br": "Short count, missed pickup, forged notes"
+  },
+  {
+   "id": "locl",
+   "c": 2,
+   "r": 4,
+   "t": "Local acquirers & banks",
+   "s": "Country-specific",
+   "tag": "<span class=\"tag I\">INFERRED</span>",
+   "role": "Each country uses its own acquirers, QR schemes and bank accounts; funds sit in local entity accounts first.",
+   "data": "Local settlement files",
+   "tm": "Per country",
+   "br": "Cross-border settlement lag"
+  },
+  {
+   "id": "net",
+   "c": 3,
+   "r": 0.5,
+   "t": "Card schemes + issuers",
+   "s": "Visa · Mastercard · RuPay",
+   "tag": "<span class=\"tag I\">INFERRED</span>",
+   "role": "Network routes authorisation to the issuing bank; clearing and settlement go to the acquirer. Interchange + scheme + acquirer fee make up MDR.",
+   "data": "ISO 8583 auth, RRN",
+   "tm": "Auth sub-second; clearing T+1",
+   "br": "Chargeback, issuer decline"
+  },
+  {
+   "id": "upi",
+   "c": 3,
+   "r": 2,
+   "t": "NPCI UPI + PSP banks",
+   "s": "Remitter ↔ beneficiary bank",
+   "tag": "<span class=\"tag I\">INFERRED</span>",
+   "role": "NPCI switch moves UPI P2M between remitter bank and beneficiary PSP bank. MDR on UPI P2M has been zero under current policy — verify before modelling fees.",
+   "data": "UPI txn ID, RRN",
+   "tm": "Real-time; merchant settlement per PSP",
+   "br": "Pending/deemed-approved, reversals"
+  },
+  {
+   "id": "esc",
+   "c": 4,
+   "r": 1,
+   "t": "Escrow / nodal & sponsor bank",
+   "s": "Holds aggregator funds",
+   "tag": "<span class=\"tag I\">INFERRED</span>",
+   "role": "RBI payment-aggregator rules require merchant funds to sit in an escrow with a scheduled bank until settled; fees and GST netted here.",
+   "data": "Settlement batch, UTR",
+   "tm": "T+1 typical",
+   "br": "Fee deductions, held settlements"
+  },
+  {
+   "id": "cb",
+   "c": 4,
+   "r": 3,
+   "t": "Bank cash counter",
+   "s": "Branch / cash chest deposit",
+   "tag": "<span class=\"tag X\">ILLUSTRATIVE</span>",
+   "role": "CIT deposits notes against the store or entity account reference.",
+   "data": "Deposit slip, credit ref",
+   "tm": "Same / next day",
+   "br": "Credit to wrong account"
+  },
+  {
+   "id": "lb",
+   "c": 5,
+   "r": 2,
+   "t": "Collection / current account bank",
+   "s": "VAN or direct a/c",
+   "tag": "<span class=\"tag X\">ILLUSTRATIVE</span> bank",
+   "role": "Illustrative: your brief uses HDFC and a VAN per store. Real bank and structure are not public. Virtual accounts let one account serve many stores.",
+   "data": "Statement (camt.053/MT940), UTR, remitter info",
+   "tm": "Daily statement; sweeps EOD",
+   "br": "Credits without reference, wrong VAN"
+  },
+  {
+   "id": "rec",
+   "c": 5,
+   "r": 0.5,
+   "t": "Recon + ERP / GL",
+   "s": "Match & book",
+   "tag": "<span class=\"tag I\">INFERRED</span>",
+   "role": "Matches invoice register ↔ aggregator/CIT report ↔ bank credit; books sales, fees, tax; parks breaks in suspense. ERP vendor not public.",
+   "data": "Invoice, settlement, bank lines",
+   "tm": "Daily batch",
+   "br": "Unmatched items, ageing suspense"
+  },
+  {
+   "id": "pay",
+   "c": 6,
+   "r": 1,
+   "t": "Payouts",
+   "s": "FOFO · vendors · payroll",
+   "tag": "<span class=\"tag V\">PUBLIC</span> 306 FOFO",
+   "role": "Franchise settlements (306 FOFO stores), supplier and factory payments, payroll for ~17.6k staff.",
+   "data": "Payment files via bank host-to-host",
+   "tm": "Cycle-based",
+   "br": "Wrong netting, duplicate payment"
+  },
+  {
+   "id": "tre",
+   "c": 6,
+   "r": 2,
+   "t": "Treasury / master account",
+   "s": "Concentration & liquidity",
+   "tag": "<span class=\"tag I\">INFERRED</span>",
+   "role": "Receives sweeps, funds outflows, parks surplus per policy; cross-border upstream from subsidiaries.",
+   "data": "Cash position, forecast",
+   "tm": "Daily",
+   "br": "Idle cash, FX exposure"
+  },
+  {
+   "id": "tax",
+   "c": 6,
+   "r": 3,
+   "t": "Statutory",
+   "s": "GST · TDS · advance tax",
+   "tag": "<span class=\"tag I\">INFERRED</span>",
+   "role": "Output GST on sales less ITC, TDS on payments, quarterly advance tax; paid via bank/govt portals.",
+   "data": "Challans, returns",
+   "tm": "Monthly / quarterly",
+   "br": "ITC mismatch, late filing"
+  }
+ ],
+ "edges": [
+  [
+   "cust",
+   "pos",
+   "store"
+  ],
+  [
+   "pos",
+   "pl",
+   "store"
+  ],
+  [
+   "pl",
+   "net",
+   "store"
+  ],
+  [
+   "pl",
+   "upi",
+   "store"
+  ],
+  [
+   "cust",
+   "web",
+   "online"
+  ],
+  [
+   "web",
+   "rzp",
+   "online"
+  ],
+  [
+   "web",
+   "php",
+   "online"
+  ],
+  [
+   "rzp",
+   "net",
+   "online"
+  ],
+  [
+   "php",
+   "upi",
+   "online"
+  ],
+  [
+   "net",
+   "esc",
+   "store"
+  ],
+  [
+   "upi",
+   "esc",
+   "store"
+  ],
+  [
+   "esc",
+   "lb",
+   "store"
+  ],
+  [
+   "cust",
+   "safe",
+   "cash"
+  ],
+  [
+   "safe",
+   "cit",
+   "cash"
+  ],
+  [
+   "cit",
+   "cb",
+   "cash"
+  ],
+  [
+   "cb",
+   "lb",
+   "cash"
+  ],
+  [
+   "cust",
+   "intl",
+   "intl"
+  ],
+  [
+   "intl",
+   "locl",
+   "intl"
+  ],
+  [
+   "locl",
+   "tre",
+   "intl"
+  ],
+  [
+   "lb",
+   "rec",
+   "core"
+  ],
+  [
+   "lb",
+   "tre",
+   "core"
+  ],
+  [
+   "rec",
+   "tre",
+   "core"
+  ],
+  [
+   "tre",
+   "pay",
+   "core"
+  ],
+  [
+   "tre",
+   "tax",
+   "core"
+  ]
+ ],
+ "scen": {
+  "In-store card": [
+   "store",
+   [
+    "cust",
+    "pos",
+    "pl",
+    "net",
+    "esc",
+    "lb",
+    "rec",
+    "tre"
+   ],
+   [
+    "Customer taps card at the counter",
+    "Lenskart POS raises invoice; Pine Labs EDC captures card, returns RRN + auth",
+    "Pine Labs routes to the acquiring bank",
+    "Card network authorises via issuer; clearing follows",
+    "Acquirer settles net of MDR + GST",
+    "Credit lands in Lenskart collection account",
+    "Recon matches invoice ↔ settlement ↔ bank; books sales, fee, tax",
+    "Cash is swept to treasury"
+   ]
+  ],
+  "In-store UPI": [
+   "store",
+   [
+    "cust",
+    "pos",
+    "pl",
+    "upi",
+    "esc",
+    "lb",
+    "rec",
+    "tre"
+   ],
+   [
+    "Customer scans the dynamic QR",
+    "Invoice and QR tied to order ID",
+    "Platform sends UPI request",
+    "NPCI moves funds remitter → beneficiary bank",
+    "Settlement from PSP/acquirer side",
+    "Bank credit with UTR",
+    "Recon match on order/RRN",
+    "Swept to treasury"
+   ]
+  ],
+  "Online · Razorpay": [
+   "online",
+   [
+    "cust",
+    "web",
+    "rzp",
+    "net",
+    "esc",
+    "lb",
+    "rec",
+    "tre"
+   ],
+   [
+    "Customer pays at checkout",
+    "Order created, gateway called",
+    "Razorpay authorises and captures; webhook confirms",
+    "Card network and issuer",
+    "Funds held in escrow; fee netted",
+    "Settlement credited, batch ID in remittance",
+    "Recon on payment ID ↔ order ID ↔ bank",
+    "Swept to treasury"
+   ]
+  ],
+  "Online · PhonePe UPI": [
+   "online",
+   [
+    "cust",
+    "web",
+    "php",
+    "upi",
+    "esc",
+    "lb",
+    "rec",
+    "tre"
+   ],
+   [
+    "Customer chooses UPI",
+    "Order created, PhonePe PG invoked",
+    "PhonePe PG sends UPI collect/intent",
+    "NPCI + PSP banks complete the debit",
+    "Merchant settlement",
+    "Bank credit",
+    "Recon on merchant txn ID",
+    "Swept to treasury"
+   ]
+  ],
+  "Cash": [
+   "cash",
+   [
+    "cust",
+    "safe",
+    "cit",
+    "cb",
+    "lb",
+    "rec",
+    "tre"
+   ],
+   [
+    "Customer pays cash",
+    "Cashier counts, seals bag at close",
+    "Armoured van scans and collects",
+    "Cash processed and deposited at branch",
+    "Bank credits the store/entity account",
+    "Recon: bag ID ↔ deposit; variance posted",
+    "Swept to treasury"
+   ]
+  ],
+  "International": [
+   "intl",
+   [
+    "cust",
+    "intl",
+    "locl",
+    "tre"
+   ],
+   [
+    "Customer pays in local currency",
+    "Local POS and tax",
+    "Local acquirer settles to entity account",
+    "Upstreamed to group treasury (FX, intercompany)"
+   ]
+  ]
+ }
+}
