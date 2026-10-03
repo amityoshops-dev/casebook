@@ -1,9 +1,191 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Case Lab · Money-flow case studies</title>
-<meta name="description" content="Interactive case studies of how money moves inside companies: payments, settlement, reconciliation and treasury.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"></head>
-<body><div class="app"><aside id="sd"></aside><main id="mn">Loading…</main></div>
-<script src="app.js"></script></body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tata Starbucks | ICS Retail Architecture Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #0b0f17; color: #e2e8f0; }
+        .glass-panel { background: rgba(18, 24, 38, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .accent-emerald { color: #00704A; }
+    </style>
+</head>
+<body class="p-6 md:p-10 min-h-screen">
+
+    <!-- Top Navigation Header -->
+    <header class="flex flex-col md:flex-row md:items-center justify-between pb-8 border-b border-slate-800 gap-4">
+        <div>
+            <div class="flex items-center gap-3">
+                <span class="text-2xl">☕</span>
+                <h1 class="text-2xl font-bold tracking-tight text-white">Tata Starbucks India: Shift Analytics & Audit Engine</h1>
+            </div>
+            <p class="text-xs font-medium text-slate-400 mt-1 uppercase tracking-wider">
+                Intent Curiosity Sphere (ICS) Retail Research Lab • Dual-Engine SCM Telemetry
+            </p>
+        </div>
+        <div class="flex items-center gap-3">
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">
+                ● Live Production Telemetry
+            </span>
+            <span class="text-xs bg-slate-800 text-slate-300 px-3 py-1 rounded-md border border-slate-700">Store: SBUX_PUNE_FC01</span>
+        </div>
+    </header>
+
+    <!-- Executive KPI Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-8">
+        <div class="glass-panel p-5 rounded-xl">
+            <p class="text-xs text-slate-400 uppercase font-semibold">12-Hour Shift Demand</p>
+            <h3 class="text-2xl font-bold text-white mt-1">676.4 <span class="text-sm font-normal text-slate-400">Cups</span></h3>
+            <p class="text-xs text-emerald-400 mt-2 font-medium">↑ 8.4% vs. Historic Shift Baseline</p>
+        </div>
+        <div class="glass-panel p-5 rounded-xl">
+            <p class="text-xs text-slate-400 uppercase font-semibold">Dairy Replenishment Quota</p>
+            <h3 class="text-2xl font-bold text-white mt-1">148.8 <span class="text-sm font-normal text-slate-400">Liters</span></h3>
+            <p class="text-xs text-slate-400 mt-2">Cold-chain delivery par: 160L</p>
+        </div>
+        <div class="glass-panel p-5 rounded-xl">
+            <p class="text-xs text-slate-400 uppercase font-semibold">Coorg Bean Allocation</p>
+            <h3 class="text-2xl font-bold text-white mt-1">12.2 <span class="text-sm font-normal text-slate-400">kg</span></h3>
+            <p class="text-xs text-slate-400 mt-2">Kushalnagar Master Roast</p>
+        </div>
+        <div class="glass-panel p-5 rounded-xl border-amber-900/50 bg-amber-950/10">
+            <p class="text-xs text-amber-400 uppercase font-semibold">Float / Settlement Leakage</p>
+            <h3 class="text-2xl font-bold text-amber-300 mt-1">₹550.00</h3>
+            <p class="text-xs text-amber-500/80 mt-2">3 Multi-rail exceptions flagged</p>
+        </div>
+    </div>
+
+    <!-- Analytics & Audit Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Deep Learning Shift Projection (Chart.js) -->
+        <div class="glass-panel p-6 rounded-xl lg:col-span-2">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-300">
+                    PyTorch Bi-LSTM Hourly Shift Curve
+                </h2>
+                <span class="text-xs text-slate-400">Trained on Tesla T4 GPUs</span>
+            </div>
+            <div class="h-64">
+                <canvas id="demandChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Real-Time POS Audit Feed -->
+        <div class="glass-panel p-6 rounded-xl flex flex-col justify-between">
+            <div>
+                <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-300 mb-4">
+                    Shift Clearing Discrepancies
+                </h2>
+                <div class="space-y-3">
+                    <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800">
+                        <div class="flex justify-between text-xs font-semibold">
+                            <span class="text-slate-300">TXN_102 (CARD)</span>
+                            <span class="text-amber-400">-₹40.00</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-1">Acquirer applied incorrect fixed MDR rate.</p>
+                    </div>
+                    <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800">
+                        <div class="flex justify-between text-xs font-semibold">
+                            <span class="text-slate-300">TXN_103 (UPI)</span>
+                            <span class="text-rose-400">ASYNC DROPPED</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-1">₹395 cleared at NPCI, POS timeout recorded.</p>
+                    </div>
+                    <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800">
+                        <div class="flex justify-between text-xs font-semibold">
+                            <span class="text-slate-300">TXN_104 (WALLET)</span>
+                            <span class="text-amber-400">-₹510.00</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-1">Starbucks App stored-value batch sync latency.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button onclick="triggerExecutiveMemo()" id="actionBtn" class="w-full mt-4 bg-emerald-600 hover:bg-emerald-500 text-white font-medium py-2.5 px-4 rounded-lg transition text-xs uppercase tracking-wider">
+                Generate C-Suite Shift Directive
+            </button>
+        </div>
+    </div>
+
+    <!-- Dynamic AI Directive Drawer -->
+    <div id="memoSection" class="mt-8 glass-panel p-6 rounded-xl hidden">
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-emerald-400 mb-3">
+            Compiled Executive Directive
+        </h2>
+        <pre id="memoContent" class="text-xs text-slate-300 font-mono whitespace-pre-wrap leading-relaxed bg-slate-950 p-5 rounded-lg border border-slate-800"></pre>
+    </div>
+
+    <script>
+        // Render 12-Hour Forecast Chart
+        const ctx = document.getElementById('demandChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'],
+                datasets: [{
+                    label: 'Projected Unit Demand (Cups)',
+                    data: [64.0, 64.6, 64.1, 63.0, 62.5, 60.8, 57.7, 53.9, 51.2, 48.6, 46.2, 43.9],
+                    borderColor: '#10b981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    fill: true,
+                    pointBackgroundColor: '#10b981'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8' } },
+                    y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8' } }
+                },
+                plugins: { legend: { display: false } }
+            }
+        });
+
+        function triggerExecutiveMemo() {
+            const btn = document.getElementById('actionBtn');
+            const memoSec = document.getElementById('memoSection');
+            const memoContent = document.getElementById('memoContent');
+
+            btn.innerText = "Synthesizing Directives...";
+            btn.classList.add("opacity-50");
+
+            setTimeout(() => {
+                memoSec.classList.remove('hidden');
+                memoContent.innerText = 
+`1. SHIFT PRODUCTION & BARISTA ALLOCATION:
+   Peak footfall concentrated across 08:00–12:00 IST (average 63.8 units/hour). Deploy 3 Baristas on main espresso deck, 1 partner dedicated to cold beverage prep, and 1 register lead. Shift transition scheduled for 14:00 IST.
+
+2. DYNAMIC RAW MATERIAL REPLENISHMENT PO:
+   - DAIRY: Issue Purchase Order #PO-8841 for 150 Liters whole milk to local cold-chain vendor. Delivery required by 16:30 IST.
+   - ESPRESSO BEANS: Requisition 15 kg of Karnataka Estate beans from local transit stockroom.
+
+3. BANKING DISPUTE & ESCROW SETTLEMENT:
+   - TXN_102: Log formal dispute with HDFC Merchant Services for ₹40 MDR miscalculation.
+   - TXN_103: Trigger manual API reconciliation against NPCI batch file to convert failed POS ticket to settled status.
+   - TXN_104: Initiate retry queue on mobile app closed-loop stored-value wallet ledger.
+
+4. STORE MANAGER ACCOUNTABILITY:
+   Store Manager must clear all ₹550 in variances before 18:00 IST shift sign-off. Daily variance exceeding 0.5% will require formal audit review.
+
+Execute now.
+
+Intent Curiosity Sphere (ICS)
+Retail & FinTech Architecture Lab
+
+---
+DISCLAIMER:
+This document, analysis, and operational directive represent independent educational research and technical simulation models developed by Intent Curiosity Sphere (ICS). This case study is conducted strictly for educational, analytical, and architectural modeling purposes and does not represent official company policy, internal corporate records, or endorsements by Tata Starbucks Private Limited, Starbucks Corporation, or Tata Consumer Products.`;
+                btn.innerText = "Directive Dispatched";
+                btn.classList.remove("opacity-50");
+            }, 600);
+        }
+    </script>
+</body>
+</html>
